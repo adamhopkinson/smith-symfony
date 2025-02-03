@@ -4,11 +4,9 @@ namespace App\Tests\Unit;
 
 use App\Model\Sum;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
-use PHPUnit\Framework\Attributes\DataProvider;
 
 class SumTest extends KernelTestCase
 {
-
     public function testSums(): void
     {
         self::bootKernel();
