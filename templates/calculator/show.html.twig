@@ -5,7 +5,7 @@
     {{ form(form) }}
 
     {% if sum|default(null) %}
-        <p>Result: {{ sum.result|round(3) }}</p>
+        <p id="result">Result: {{ sum.result|round(3) }}</p>
     {% endif %}
 
 {% endblock %}

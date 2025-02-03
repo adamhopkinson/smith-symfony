@@ -10,4 +10,3 @@ In writing this feature, I have considered the following:
 - 2. I know that best practice would be to version the CSS file using asset mapper
 - I intentionally haven't used an enum for the operators - it's overkill at this level
 - I've also intentionally not used a Calculator Repository, instead opting to put the calculate method in the `Sum` class
-- I considered explicitly mitigating divide by zero issues using either a `callback` or `expression` validator, but as Symfony handles the divide by zero natively, there's not much point
