@@ -7,8 +7,13 @@ use Symfony\Component\Validator\Context\ExecutionContextInterface;
 
 class Sum
 {
+    #[Assert\NotBlank]
     public float $value1;
+
+    #[Assert\NotBlank]
     public float $value2;
+
+    #[Assert\NotBlank]
     public string $operator;
 
     public function getResult(): float
@@ -22,7 +27,7 @@ class Sum
     }
 
     #[Assert\Callback]
-    public function validate(ExecutionContextInterface $context, $payload): void
+    public function validate(ExecutionContextInterface $context): void
     {
         if ('/' == $this->operator && 0 == $this->value2) {
             $context->buildViolation('Please avoid dividing by zero!')

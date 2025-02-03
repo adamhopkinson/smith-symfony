@@ -18,9 +18,6 @@ class CalculatorType extends AbstractType
         $builder
             ->add('value1', NumberType::class, [
                 'html5' => true,
-                'constraints' => [
-                    new NotBlank(),
-                ],
             ])
             ->add('operator', ChoiceType::class, [
                 'choices' => [
@@ -30,16 +27,10 @@ class CalculatorType extends AbstractType
                     '/' => '/',
                     '*' => '*',
                 ],
-                'constraints' => [
-                    new NotBlank(),
-                ],
                 'invalid_message' => 'The operator field is required.',
             ])
             ->add('value2', NumberType::class, [
                 'html5' => true,
-                'constraints' => [
-                    new NotBlank(),
-                ],
             ])
             ->add('Calculate', SubmitType::class)
         ;
