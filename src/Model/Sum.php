@@ -14,6 +14,10 @@ class Sum
     public float $value2;
 
     #[Assert\NotBlank]
+    #[Assert\Choice(
+        choices: ['+', '-', '/', '*'],
+        message: 'The operator field is required.'
+    )]
     public string $operator;
 
     public function getResult(): float

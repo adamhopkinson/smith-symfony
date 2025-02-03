@@ -27,7 +27,6 @@ class CalculatorType extends AbstractType
                     '/' => '/',
                     '*' => '*',
                 ],
-                'invalid_message' => 'The operator field is required.',
             ])
             ->add('value2', NumberType::class, [
                 'html5' => true,
