@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    <h1>Calculator</h1>
+    {{ form(form) }}
+
+    {% if sum|default(null) %}
+        <p>Result: {{ sum.result|round(3) }}</p>
+    {% endif %}
+
+{% endblock %}

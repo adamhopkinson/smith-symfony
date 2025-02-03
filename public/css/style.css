@@ -1,0 +1,9 @@
+form #calculator {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+form #calculator label {
+    display: none;
+}
